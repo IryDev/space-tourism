@@ -1,5 +1,5 @@
-# django-space-tourism
-## 🪐🌍🚀A Django Website to practice it and css
+# space-tourism
+## 🪐🌍🚀A Solution to the Space Tourism website challenge from frontend mentor
 
 
 ## Languages and Tools used
