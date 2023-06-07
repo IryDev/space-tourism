@@ -103,7 +103,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [IryDev](https://www.your-site.com)
+- Website - [IryDev](https://irydev.github.io/CV)
 - Frontend Mentor - [@IryDev](https://www.frontendmentor.io/profile/IryDev)
 
 ## Acknowledgments
