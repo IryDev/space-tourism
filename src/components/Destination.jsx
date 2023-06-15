@@ -27,7 +27,7 @@ export function Destination() {
         </h2>
 
         <div className="planet-info">
-          <img src={data.destinations[planetNumber].images.png} alt={data.destinations[planetNumber].name} />
+          <img src={data.destinations[planetNumber].images.webp} alt={data.destinations[planetNumber].name} />
 
           <div>
             <ul>

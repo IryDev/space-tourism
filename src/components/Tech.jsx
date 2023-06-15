@@ -1,5 +1,5 @@
 import React from "react";
-import technology from "../assets/technology/technology2.mp4";
+import techBackground from "../assets/technology/techBackground.mp4";
 import data from "../../data.json";
 import { useState } from "react";
 
@@ -18,7 +18,7 @@ export function Technology() {
   return (
     <>
       <video muted loop autoPlay>
-        <source src={technology} />
+        <source src={techBackground} />
       </video>
 
       <section className="tech-container">

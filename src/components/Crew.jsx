@@ -28,9 +28,9 @@ export function Crew() {
         <div className="crew-grid">
           <div className="hero-img">
             <picture>
-              <source src={data.crew[crewNumber].images.png} />
+              <source src={data.crew[crewNumber].images.webp} />
               <img
-                src={data.crew[crewNumber].images.png}
+                src={data.crew[crewNumber].images.webp}
                 alt={data.crew[crewNumber].name}
               />
             </picture>
