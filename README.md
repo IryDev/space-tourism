@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+<img width="1410" alt="IryDev frontendmentor space-tourism" src="https://github.com/IryDev/space-tourism/assets/86270481/1325c0ce-14ea-424d-b586-04ec9c92d0f8">
 
 ### Links
 
@@ -48,6 +48,7 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
+- [Sass/Scss](https://sass-lang.com) - CSS extension
 
 
 ### What I learned
