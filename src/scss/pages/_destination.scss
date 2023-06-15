@@ -9,8 +9,8 @@
 }
 
 .planet-info h1 {
-  font: var(--heading-2);
-  color: white;
+  font: variables.$heading-2;
+  color: colors.$white;
   text-transform: uppercase;
 }
 
@@ -32,16 +32,16 @@
 }
 
 .planet-info ul li {
-  color: var(--powder-blue);
+  color: colors.$powder-blue;
   text-transform: uppercase;
   margin: 0 1rem;
-  font: var(--nav-text);
+  font: variables.$nav-text;
   position: relative;
   cursor: pointer;
 }
 
 .destination-container h2 {
-  color: var(--white);
+  color: colors.$white;
 }
 
 h2 span {
@@ -55,7 +55,7 @@ h2 span {
 }
 
 .planet-info h1{
-  font: var(--heading-2);
+  font: variables.$heading-2;
   color: white;
   text-transform: uppercase;
 }
@@ -78,16 +78,16 @@ h2 span {
 }
 
 .planet-info ul li {
-  color: var(--powder-blue);
+  color: colors.$powder-blue;
   text-transform: uppercase;
   margin: 0 1rem;
-  font: var(--nav-text);
+  font: variables.$nav-text;
   position: relative;
   cursor: pointer;
 }
 
 .destination-container h2 {
-  color: var(--white);
+  color: colors.$white;
 }
 
 .more-info {
@@ -99,11 +99,11 @@ h2 span {
   display: flex;
   flex-direction: column;
   color: colors.$powder-blue;
-  font: var(--body-text);
+  font: variables.$body-text;
 }
 
 .more-info h2 span{
-  font: var(--heading-4);
+  font: variables.$heading-4;
   color: colors.$white;
 }
 
@@ -116,7 +116,7 @@ h2 span {
   height: 2px;
   bottom: -10px;
   left: 0;
-  background-color: white;
+  background-color: colors.$white;
   transition: transform 0.25s ease-in;
   box-shadow: 0 0 8px #fff, inset 0 0 8px #fff, 0 0 16px white,
     inset 0 0 16px white, 0 0 32px white, inset 0 0 32px white;

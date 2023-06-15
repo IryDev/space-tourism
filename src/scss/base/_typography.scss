@@ -1,4 +1,5 @@
 @use "../abstracts/variables";
+@use "../abstracts/colors";
 
 body {
   font-size: 18px;
@@ -17,6 +18,6 @@ h1{
 h2 {
   font: variables.$heading-5;
   text-transform: uppercase;
-  color: var(--powder-blue);
+  color: colors.$powder-blue;
   letter-spacing: 4.5px;
 }

@@ -1,4 +1,6 @@
 @use "../abstracts/mixins";
+@use '../abstracts/colors';
+@use '../abstracts/variables';
 
 nav {
   flex: 100% 1;
@@ -10,8 +12,8 @@ nav {
   }
 
   a {
-    color: var(--white);
-    font: var(--nav-text);
+    color: colors.$white;
+    font: variables.$nav-text;
     letter-spacing: 3px;
     transition: 0.3s all;
     border-radius: 5px;

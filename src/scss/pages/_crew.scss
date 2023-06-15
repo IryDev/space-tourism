@@ -19,20 +19,20 @@
 .selector {
   width: 10px;
   height: 10px;
-  background-color: #d0d6f94f;
+  background-color: colors.$transparent-white;
   gap: 2rem;
   border-radius: 100%;
   cursor: pointer;
 }
 
 .crew-container h1 {
-  font: var(--heading-3);
-  color: white;
+  font: variables.$heading-3;
+  color: colors.$white;
   text-transform: uppercase;
 }
 
 .selector-active {
-  background-color: var(--white);
+  background-color: colors.$white;
 }
 
 .crew-grid {
@@ -73,6 +73,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .crew-container > h2{
+    padding-left: inherit;
+  }
+
   .crew-grid {
     flex-direction: column;
   }
