@@ -18,6 +18,7 @@ video{
     position: fixed;
     z-index: -5;
     object-fit: cover;
+    animation: showing 1s linear forwards;
 }
 
 .container{
@@ -30,4 +31,14 @@ video{
   width: 100%;
   background-color: var(--powder-blue);
   margin: 2rem 0;
+}
+
+@keyframes showing {
+    from{
+        transform: scale(0);
+    }
+
+    to{
+        transform: scale(1);
+    }
 }
