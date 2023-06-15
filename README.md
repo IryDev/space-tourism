@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Here](https://www.frontendmentor.io/solutions/space-tourism-Wa_w77oPUH)
+- Live Site URL: [Here](https://space-tourism-irydev.vercel.app/)
 
 ## My process
 
