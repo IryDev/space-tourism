@@ -1,0 +1,22 @@
+@use "../abstracts/variables";
+
+body {
+  font-size: 18px;
+}
+
+p {
+  letter-spacing: 2px;
+  line-height: 1.5;
+  font: variables.$body-text;
+}
+
+h1{
+    text-transform: uppercase;
+}
+
+h2 {
+  font: variables.$heading-5;
+  text-transform: uppercase;
+  color: var(--powder-blue);
+  letter-spacing: 4.5px;
+}

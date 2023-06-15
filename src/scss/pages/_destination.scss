@@ -1,0 +1,140 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+@use '../abstracts/colors';
+
+.destination-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10rem 6rem 0;
+}
+
+.planet-info h1 {
+  font: var(--heading-2);
+  color: white;
+  text-transform: uppercase;
+}
+
+.planet-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+  place-items: center;
+  gap: 3rem;
+}
+
+.planet-info img {
+  animation: rotate infinite linear 10s;
+}
+
+.planet-info ul {
+  display: flex;
+  margin: 2rem 0;
+}
+
+.planet-info ul li {
+  color: var(--powder-blue);
+  text-transform: uppercase;
+  margin: 0 1rem;
+  font: var(--nav-text);
+  position: relative;
+  cursor: pointer;
+}
+
+.destination-container h2 {
+  color: var(--white);
+}
+
+h2 span {
+  font-weight: bold;
+  color: colors.$powder-blue;
+}
+
+.more-info {
+  display: flex;
+  gap: 3rem;
+}
+
+.planet-info h1{
+  font: var(--heading-2);
+  color: white;
+  text-transform: uppercase;
+}
+
+.planet-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+  place-items: center;
+  gap: 3rem;
+}
+
+.planet-info img {
+  animation: rotate infinite linear 10s;
+}
+
+.planet-info ul {
+  display: flex;
+  margin: 2rem 0;
+}
+
+.planet-info ul li {
+  color: var(--powder-blue);
+  text-transform: uppercase;
+  margin: 0 1rem;
+  font: var(--nav-text);
+  position: relative;
+  cursor: pointer;
+}
+
+.destination-container h2 {
+  color: var(--white);
+}
+
+.more-info {
+  display: flex;
+  gap: 3rem;
+}
+
+.more-info h2 {
+  display: flex;
+  flex-direction: column;
+  color: colors.$powder-blue;
+  font: var(--body-text);
+}
+
+.more-info h2 span{
+  font: var(--heading-4);
+  color: colors.$white;
+}
+
+.planet-info li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -10px;
+  left: 0;
+  background-color: white;
+  transition: transform 0.25s ease-in;
+  box-shadow: 0 0 8px #fff, inset 0 0 8px #fff, 0 0 16px white,
+    inset 0 0 16px white, 0 0 32px white, inset 0 0 32px white;
+  transform-origin: bottom right;
+}
+
+.planet-info .active::after,
+.planet-info li:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
