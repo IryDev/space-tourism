@@ -1,0 +1,70 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+@use '../abstracts/colors';
+
+.tech-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10rem 0 0 0rem;
+}
+
+.number-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-container > h2{
+    padding-left: 6rem;
+    color: colors.$white;
+}
+
+.num  {
+  height: 70px;
+  width: 70px;
+  background-color: transparent;
+  border: 0.1px solid colors.$powder-blue;
+  @include mixins.center;
+  border-radius: 100%;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: colors.$white;
+  gap: 3rem;
+  cursor: pointer;
+  transition: .5s all;
+}
+
+.num:hover{
+    background-color: colors.$powder-blue;
+}
+
+.info-tech h1{
+    font: variables.$heading-3;
+    color: colors.$white;
+}
+
+.grid-tech{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    padding: 0 0 0 6rem;
+    justify-content: space-between;
+}
+
+.num-active{
+    background-color: var(--white);
+    color: var(--black);
+    border: var(--white);
+}
+
+.number-nav{
+    order: 1;
+}
+
+.info-tech{
+    order: 4;
+}
+
+.tech-img{
+    order: 9;
+}

@@ -1,0 +1,53 @@
+@use "../abstracts/mixins";
+
+nav {
+  flex: 100% 1;
+  z-index: 2;
+
+  li {
+    text-transform: uppercase;
+    margin-left: 2.5rem;
+  }
+
+  a {
+    color: var(--white);
+    font: var(--nav-text);
+    letter-spacing: 3px;
+    transition: 0.3s all;
+    border-radius: 5px;
+    position: relative;
+
+    &::after {
+      @include mixins.neon-underline;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+
+  span {
+    font-weight: 700;
+    margin-right: 0.5rem;
+  }
+
+  .active {
+    &::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+}
+
+nav ul,
+nav li,
+nav a {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.burger {
+  display: none;
+}
