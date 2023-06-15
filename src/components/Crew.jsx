@@ -4,8 +4,8 @@ import data from "../../data.json";
 import { useState } from "react";
 
 import crew1 from "../assets/crew/image-douglas-hurley.webp";
-import crew2 from "../assets/crew/image-victor-glover.webp";
-import crew3 from "../assets/crew/image-mark-shuttleworth.webp";
+import crew2 from "../assets/crew/image-mark-shuttleworth.webp";
+import crew3 from "../assets/crew/image-victor-glover.webp";
 import crew4 from "../assets/crew/image-anousheh-ansari.webp";
 
 
