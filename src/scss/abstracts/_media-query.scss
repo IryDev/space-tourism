@@ -67,6 +67,10 @@
 
 
 @media screen and (max-width: 968px) {
+  .destination-container{
+    padding: 10rem 2rem 0;
+  }
+  
   .planet-info {
     display: flex;
     flex-direction: column;
