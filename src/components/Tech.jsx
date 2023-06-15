@@ -1,10 +1,21 @@
 import React from "react";
-import techBackground from "../assets/technology/techBackground.mp4";
+import techBackground from "./../assets/technology/techBackground.mp4";
 import data from "../../data.json";
 import { useState } from "react";
 
+import launch from "../assets/technology/image-launch-vehicle-portrait.jpg";
+import capsule from "../assets/technology/image-space-capsule-portrait.jpg";
+import spaceport from "../assets/technology/image-spaceport-portrait.jpg";
+
+import launchLand from "../assets/technology/image-launch-vehicle-landscape.jpg";
+import capsulLand from "../assets/technology/image-space-capsule-landscape.jpg";
+import spaceportLand from "../assets/technology/image-spaceport-landscape.jpg";
+
 export function Technology() {
   const [techNumber, setTechNumber] = useState(0);
+
+  var tech = [launch, capsule, spaceport];
+  var techLand = [launchLand, capsulLand, spaceportLand]
 
   function techChange(e) {
     setTechNumber(e.target.dataset.index);
@@ -29,15 +40,11 @@ export function Technology() {
         <div className="grid-tech">
           <div className="tech-img">
             <picture>
-              <source
-                media="(min-width: 968px)"
-                srcSet={data.technology[techNumber].images.portrait}
-              />
-              <img src={data.technology[techNumber].images.landscape} alt="" />
+              <source media="(max-width: 968px)" srcSet={techLand[techNumber]} />
+              <img src={tech[techNumber]} alt="" />
             </picture>
           </div>
 
-          
           <div className="number-nav">
             <div data-index={0} onClick={techChange} className="num-active num">
               1

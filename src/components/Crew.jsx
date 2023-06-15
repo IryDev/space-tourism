@@ -1,10 +1,20 @@
 import React from "react";
-import crewBackground from "../assets/crew/crew-background.mp4";
+import crewBackground from "./../assets/crew/crew-background.mp4";
 import data from "../../data.json";
 import { useState } from "react";
 
+import crew1 from "../assets/crew/image-douglas-hurley.webp";
+import crew2 from "../assets/crew/image-victor-glover.webp";
+import crew3 from "../assets/crew/image-mark-shuttleworth.webp";
+import crew4 from "../assets/crew/image-anousheh-ansari.webp";
+
+
 export function Crew() {
   const [crewNumber, setCrewNumber] = useState(0);
+
+  var crewMember = [
+    crew1, crew2, crew3, crew4
+  ]
 
   function crewChange(e) {
     setCrewNumber(e.target.dataset.index);
@@ -28,9 +38,9 @@ export function Crew() {
         <div className="crew-grid">
           <div className="hero-img">
             <picture>
-              <source src={data.crew[crewNumber].images.webp} />
+              <source src={crewMember[crewNumber]} />
               <img
-                src={data.crew[crewNumber].images.webp}
+                src={crewMember[crewNumber]}
                 alt={data.crew[crewNumber].name}
               />
             </picture>

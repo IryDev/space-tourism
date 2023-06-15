@@ -1,10 +1,17 @@
 import React from "react";
-import destinationBackground from "../assets/destination/destinationBackground.mp4";
+import destinationBackground from "./../assets/destination/destinationBackground.mp4";
 import data from "../../data.json";
 import { useState } from "react";
 
+import moon from "../assets/destination/image-moon.webp";
+import mars from "../assets/destination/image-mars.webp";
+import europa from "../assets/destination/image-europa.webp";
+import titan from "../assets/destination/image-titan.webp";
+
 export function Destination() {
   const [planetNumber, setPlanetNumber] = useState(0);
+
+  var planets = [moon, mars, europa, titan];
 
   function planetChange(e) {
     setPlanetNumber(e.target.dataset.index);
@@ -27,7 +34,7 @@ export function Destination() {
         </h2>
 
         <div className="planet-info">
-          <img src={data.destinations[planetNumber].images.webp} alt={data.destinations[planetNumber].name} />
+          <img src={planets[planetNumber]} alt={data.destinations[planetNumber].name} />
 
           <div>
             <ul>
