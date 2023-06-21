@@ -8,6 +8,7 @@ export function Nav() {
   const [burger_class, setBurgerClass] = useState("burger unclicked");
   const [menu_class, setMenuClass] = useState("navbar");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
+  const [isMenuOpen, toggleMenu] = useState(false);
 
   const updateMenu = () => {
     if (!isMenuClicked) {
@@ -30,22 +31,22 @@ export function Nav() {
         <nav className={menu_class}>
           <ul>
             <li>
-              <NavLink to="/">
+              <NavLink onClick={updateMenu} to="/">
                 <span>00</span> Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/destination">
+              <NavLink onClick={updateMenu} to="/destination">
                 <span>01</span> Destination
               </NavLink>
             </li>
             <li>
-              <NavLink to="/crew">
+              <NavLink onClick={updateMenu} to="/crew">
                 <span>02</span> Crew
               </NavLink>
             </li>
             <li>
-              <NavLink to="/technology">
+              <NavLink onClick={updateMenu} to="/technology">
                 <span>03</span> Technology
               </NavLink>
             </li>
