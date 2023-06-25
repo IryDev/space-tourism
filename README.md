@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Screenshot
 
-<img width="1410" alt="IryDev frontendmentor space-tourism" src="https://github.com/IryDev/space-tourism/assets/86270481/1325c0ce-14ea-424d-b586-04ec9c92d0f8">
+<img width="1410" alt="irydev frontendmentor space-tourism" src="https://github.com/IryDev/space-tourism/assets/86270481/1325c0ce-14ea-424d-b586-04ec9c92d0f8">
 
 ### Links
 
