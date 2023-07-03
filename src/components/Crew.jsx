@@ -2,19 +2,17 @@ import React from "react";
 import crewBackground from "./../assets/crew/crew-background.mp4";
 import data from "../../data.json";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 import crew1 from "../assets/crew/image-douglas-hurley.webp";
 import crew2 from "../assets/crew/image-mark-shuttleworth.webp";
 import crew3 from "../assets/crew/image-victor-glover.webp";
 import crew4 from "../assets/crew/image-anousheh-ansari.webp";
 
-
 export function Crew() {
   const [crewNumber, setCrewNumber] = useState(0);
 
-  var crewMember = [
-    crew1, crew2, crew3, crew4
-  ]
+  const crewMember = [crew1, crew2, crew3, crew4];
 
   function crewChange(e) {
     setCrewNumber(e.target.dataset.index);
@@ -47,35 +45,29 @@ export function Crew() {
             <div className="line"></div>
           </div>
 
-          <div className="crew-info">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="crew-info"
+          >
             <div className="selector-container">
-              <div
-                data-index={0}
-                onClick={crewChange}
-                className="selector selector-active"
-              ></div>
-              <div
-                data-index={1}
-                onClick={crewChange}
-                className="selector"
-              ></div>
-              <div
-                data-index={2}
-                onClick={crewChange}
-                className="selector"
-              ></div>
-              <div
-                data-index={3}
-                onClick={crewChange}
-                className="selector"
-              ></div>
+              {crewMember.map((crew, index) => (
+                <div
+                  key={index}
+                  data-index={index}
+                  onClick={crewChange}
+                  className="selector"
+                ></div>
+              ))}
             </div>
+
             <div className="crew-member">
               <h2>{data.crew[crewNumber].role}</h2>
               <h1>{data.crew[crewNumber].name}</h1>
               <p>{data.crew[crewNumber].bio}</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

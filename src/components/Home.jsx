@@ -1,6 +1,7 @@
 import React from "react";
 import bckgVideo from "../assets/home/space.mp4";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export function Home() {
   return (
@@ -9,11 +10,20 @@ export function Home() {
         <source src={bckgVideo} type="video/mp4" />
       </video>
       <section className="home-container container">
-        <div className="explore">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          className="explore"
+        >
           <Link to="/Destination">Explore</Link>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: 200 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <h2>So, you want to travel to</h2>
           <h1>Space</h1>
           <p>
@@ -22,7 +32,7 @@ export function Home() {
             Well sit back, and relax because we’ll give you a truly out of this
             world experience!
           </p>
-        </div>
+        </motion.div>
       </section>
     </>
   );

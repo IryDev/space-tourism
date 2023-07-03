@@ -1,14 +1,35 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/shared/logo.svg";
+import close from "../assets/shared/icon-close.svg";
 import burger from "../assets/shared/icon-hamburger.svg";
 import { useState } from "react";
+import { motion } from 'framer-motion';
 
 export function Nav() {
   const [burger_class, setBurgerClass] = useState("burger unclicked");
   const [menu_class, setMenuClass] = useState("navbar");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
   const [isMenuOpen, toggleMenu] = useState(false);
+  const links = [
+    {
+      name: "home",
+      to: "/",
+    },
+    {
+      name: "destination",
+      to: "/destination",
+    },
+    {
+      name: "crew",
+      to: "/crew",
+    },
+
+    {
+      name: "technology",
+      to: "/technology",
+    },
+  ];
 
   const updateMenu = () => {
     if (!isMenuClicked) {
@@ -30,28 +51,16 @@ export function Nav() {
         </div>
         <nav className={menu_class}>
           <ul>
-            <li>
-              <NavLink onClick={updateMenu} to="/">
-                <span>00</span> Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink onClick={updateMenu} to="/destination">
-                <span>01</span> Destination
-              </NavLink>
-            </li>
-            <li>
-              <NavLink onClick={updateMenu} to="/crew">
-                <span>02</span> Crew
-              </NavLink>
-            </li>
-            <li>
-              <NavLink onClick={updateMenu} to="/technology">
-                <span>03</span> Technology
-              </NavLink>
-            </li>
+            {links.map((link, index) => (
+              <li key={index}>
+                <NavLink onClick={updateMenu} to={link.to}>
+                  <span>0{index}</span> {link.name}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </nav>
+
         <img
           className={burger_class}
           src={burger}
